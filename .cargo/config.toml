@@ -1,0 +1,16 @@
+# ── Konfiguracja buildu dla ESP32-C6 (RISC-V) ────────────────────────
+[target.riscv32imac-unknown-none-elf]
+runner = "espflash flash --monitor"
+
+[build]
+target = "riscv32imac-unknown-none-elf"
+
+[env]
+ESP_LOG = "INFO"
+
+# ── Rozmiar areny tasków Embassy ─────────────────────────────────────
+# W embassy-executor 0.9+ task-arena-size nie jest już feature'em —
+# konfiguruje się przez zmienną środowiskową (w bajtach, jako hex).
+# 32768 = 0x8000 bajtów na stosy wszystkich tasków łącznie.
+# Zwiększ jeśli dostajesz panic "embassy: task arena full" przy spawnowaniu.
+EMBASSY_EXECUTOR_TASK_ARENA_SIZE = "32768"

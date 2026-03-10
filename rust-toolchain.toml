@@ -1,0 +1,5 @@
+# esp-hal 1.0.0 jest zgodny ze stable Rust (>= 1.75)
+# Nie potrzeba nightly! Pinujemy konkretną stabilną wersję.
+[toolchain]
+channel  = "stable"
+targets  = ["riscv32imac-unknown-none-elf"]
