@@ -1,11 +1,12 @@
-# ESP32-C6 BMP280 Logger (Rust/Embassy)
+# ESP32-C6 BMP280 Logger [Rust/Embassy]
 
 A lightweight, `#![no_std]` data logger for the ESP32-C6. It reads temperature and pressure from a BMP280 sensor over I2C and streams the formatted data over UART. Built on top of `esp-hal` and the Embassy async runtime.
 
-## Hardware & Wiring
+## Hardware
+Tested on a standard ESP32-C6 (RISC-V) dev board with a BMP280 breakout module.
 
-Tested on a standard ESP32-C6 dev board with a generic BMP280 breakout module.
 
+## Wiring
 | ESP32-C6 Pin | BMP280 / Interface |
 |--------------|--------------------|
 | GPIO19       | I2C SDA            |
